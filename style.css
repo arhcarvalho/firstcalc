@@ -18,7 +18,7 @@
     padding: 5px;
 }
 .img-bloco:hover{
-  cursor: pointer;
+  cursor: crosshair;
 }
 .result{
   margin-top: 20px;
@@ -28,7 +28,7 @@
 }
 /* div do botão e efeitos */
 .result, button::after{
-    cursor: pointer;
+    cursor: crosshair;
     width: 180px;
     text-align: center;
     height: 46px;
@@ -199,7 +199,7 @@ li{
 /* formatação das 2 imagens para alterar o modo visualização */
 .imgLight{
   opacity: 0.5;
-  cursor: pointer;
+  cursor: crosshair;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -207,7 +207,7 @@ li{
 }
 .imgDark{
   opacity: 0.5;
-  cursor: pointer;
+  cursor: crosshair;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -248,7 +248,7 @@ li{
   width: 1.5rem;
   line-height: 1.5rem;
   text-align: center;
-  cursor: pointer;
+  cursor: alias;
   border-radius: 0.25rem;
   background-color: lightgray;
 }
@@ -268,4 +268,21 @@ h1{
 .imgDark, .imgLight{
   width: 30px;
   height: 30px;
+}
+footer a{
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  text-align: center;
+  margin: 5px;
+  font-size: 12px;
+}
+footer a:hover{
+  cursor:crosshair;
+  background-color: yellow;
+}
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
