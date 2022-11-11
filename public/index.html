@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cálculo do Salário - Versão 1.0</title>
+    <link rel="icon" href="logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<div class="divs">
+    <div class="left"></div>
+        <div class="conteudo">
+            <div class="topo-dir">
+                <div class="bloco">
+                    <img src="bloco.png" class="img-bloco">
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close-button">×</span>
+                            <h1>Atenção!</h1>
+                            <h2>Este aplicativo está criado com o intuito de calcular o salário líquido de um colaborador <mark>não casado sem dependentes.</mark></h2>
+                        </div>
+                    </div>
+                    <h1>Deseja efetuar o cálculo do seu salário líquido?</h1>
+                </div>
+                <form>
+                <div class="format">
+                    <ul>
+                        <p class="p-list">Insira os seguintes dados para cálculo:</p>
+                        <li><p>Vencimento base:</p>
+                        <input type="text" id="base" class="valores"></li>
+                        <li><p>Serviço de prevenção semanais:</p>
+                        <input type="text" id="prev" class="valores"></li>
+                        <li><p>Serviço de prevenção fim-de-semana:</p>
+                        <input type="text" id="prevfds" class="valores"></li>
+                        <li><p>Pernoitas:</p>
+                        <input type="text" id="pern" class="valores"></li>
+                        <li><p>Dia de trabalho fim-de-semana:</p>
+                        <input type="text" id="sab" class="valores"></li>
+                        <li><p>Subsídio de refeição:</p>
+                        <input type="text" id="alim" class="valores"></li>
+                    </ul>
+                <button type="button" onclick="calc()" class="result">EFETUAR O CÁLCULO!</button>
+
+                <p id="demo"></p>
+
+                <div id="result" class="resultado"></div>
+            </div>
+        </form>
+    </div>        
+</div>
+</div>
+
+<div class="modo">
+    <p><strong>Modo tons brancos</strong> ou <strong>Modo escuro?</strong></p>
+    <img src="night.png" class="imgDark" onclick="darkMode()">
+    <img src="daylight.png" class="imgLight" onclick="lightMode()">
+</div>
+
+<script>
+    function darkMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+    }
+    function lightMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+      }
+                const modal = document.querySelector(".modal");
+                const imgbloco = document.querySelector(".img-bloco");
+                const closeButton = document.querySelector(".close-button");
+
+                function toggleModal() {
+                    modal.classList.toggle("show-modal");
+                }
+
+                function windowOnClick(event) {
+                    if (event.target === modal) {
+                        toggleModal();
+                    }
+                }
+
+                imgbloco.addEventListener("click", toggleModal);
+                closeButton.addEventListener("click", toggleModal);
+                window.addEventListener("click", windowOnClick);
+</script>
+
+    <script src="app.js"></script>
+
+</html>
