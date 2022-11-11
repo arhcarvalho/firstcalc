@@ -1,0 +1,271 @@
+/* formatação da página total */
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+/* div do bloco que contém imagem e "título" */
+.bloco{
+    margin: 0 0 0 20;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* div da imagem bloco */
+.img-bloco{
+    height: 100px;
+    padding: 5px;
+}
+.img-bloco:hover{
+  cursor: pointer;
+}
+.result{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* div do botão e efeitos */
+.result, button::after{
+    cursor: pointer;
+    width: 180px;
+    text-align: center;
+    height: 46px;
+    padding: 5px;
+    font-size: 12px;
+    font-family: 'Bebas Neue', cursive;
+    background: linear-gradient(45deg, transparent 5%, #225fc8 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 88px;
+    box-shadow: 6px 0px 0px #225fc8;
+    outline: transparent;
+    position: relative;
+}
+.result::after{
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    
+    content: 'EFETUAR O CALCÚLO';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, orange 3%, orange 5%, orange 5%);
+    text-shadow: -3px -3px 0px orange, 3px 3px 0px orange;
+    clip-path: var(--slice-0);
+} 
+.result:hover::after{
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+@keyframes glitch{
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+}
+/* div do contéudo contendo o formulário */
+.conteudo{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.format{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+/* formatação da checkbox */
+.valores{
+    background-color: rgb(241, 242, 244);
+    text-align: center;
+    width: 75px;
+}
+/* formatação do resultado que sai da função */
+.resultado{
+    text-align: center;
+    margin: 10px;
+    width: 120px;
+    min-width: auto;
+    min-height: auto;
+    height: 50px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* formatação dos títulos e parágrafos */
+p{
+    text-align: center;
+    margin: 5px;
+    font-size: 14px;
+}
+.p-list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 5px;
+    font-size: 14px;
+}
+h2{
+    text-align: center;
+    min-width: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+li{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+}
+/* divisão da tela em 3 colunas para texto à direita */
+.divs{
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.right{
+  writing-mode: vertical-lr;
+  display: flex;
+  justify-content: flex-end;
+}
+/* formatação para modo dark/daylight */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.light-mode {
+  background-color: white;
+  color: black;
+}
+.modo{
+  flex-direction: row;
+  display: flex;
+}
+/* formatação das 2 imagens para alterar o modo visualização */
+.imgLight{
+  opacity: 0.5;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px;
+}
+.imgDark{
+  opacity: 0.5;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+
+.modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #225fc8;
+  opacity: 0.9;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.close-button:hover {
+  background-color: darkgray;
+}
+h1{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgDark, .imgLight{
+  width: 30px;
+  height: 30px;
+}
