@@ -126,6 +126,7 @@
     justify-content: center;
     flex-direction: column;
     margin-bottom: 10px;
+    margin-right: 5px;
 }
 /* formatação da checkbox */
 .valores{
@@ -155,8 +156,9 @@ p{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin: 5px;
-    font-size: 14px;
+    margin: 0px;
+    font-weight: bold;
+    font-size: 18px;
 }
 h2{
     text-align: center;
@@ -234,12 +236,13 @@ li{
 .modal-content {
   position: absolute;
   top: 40%;
+  padding: 10px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #225fc8;
   opacity: 0.9;
   padding: 1rem 1.5rem;
-  width: 24rem;
+  width: 20rem;
   border-radius: 0.5rem;
 }
 .close-button {
