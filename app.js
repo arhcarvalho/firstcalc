@@ -21,6 +21,11 @@ function calc(){
     calcularSab = parseInt(sab * 50);
     calcularAlim = parseFloat(alim * 4.77);
     calcularPrevFds = parseInt(prevfds * 20);
+    calcularPrev = 0;
+    calcularPern = 0;
+    calcularSab = 0;
+    calcularAlim = 0;
+    calcularPrevFds = 0;
     
     // cálculo do base com os descontos relativos ao imposto e IRS (tabela de trabalhador dependente sem descendentes)
    

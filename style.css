@@ -130,17 +130,16 @@
 /* formatação da checkbox */
 .valores{
     background-color: rgb(241, 242, 244);
-    text-align: center;
+    text-align:end;
     width: 75px;
 }
 /* formatação do resultado que sai da função */
 .resultado{
     text-align: center;
-    margin: 10px;
-    width: 120px;
+    width: 200px;
     min-width: auto;
     min-height: auto;
-    height: 50px;
+    height: 25px;
     font-size: 12px;
     display: flex;
     align-items: center;
@@ -148,7 +147,7 @@
 }
 /* formatação dos títulos e parágrafos */
 p{
-    text-align: center;
+    text-align:end;
     margin: 5px;
     font-size: 14px;
 }
@@ -167,8 +166,9 @@ h2{
 }
 li{
     display: flex;
-    align-items: center;
+    align-items:flex-end;
     justify-content: flex-end;
+    flex-direction: column;
     list-style: none;
 }
 /* divisão da tela em 3 colunas para texto à direita */
@@ -213,7 +213,6 @@ li{
   border-radius: 50%;
   margin: 5px;
 }
-
 
 .modal {
   position: fixed;
