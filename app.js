@@ -2,11 +2,11 @@ function calc(){
 
     // abaixo as variáveis que vão associar ao valor inserido
     var base = parseInt(document.querySelector("#base").value);
-    var prev = parseInt(document.querySelector("#prev").value);
-    var pern = parseInt(document.querySelector("#pern").value);
-    var sab = parseInt(document.querySelector("#sab").value);
-    var alim = parseInt(document.querySelector("#alim").value);
-    var prevfds = parseInt(document.querySelector("#prevfds").value);
+    var prev = parseInt(document.querySelector("#prev").value || "0");
+    var pern = parseInt(document.querySelector("#pern").value || "0");
+    var sab = parseInt(document.querySelector("#sab").value || "0");
+    var alim = parseInt(document.querySelector("#alim").value || "0");
+    var prevfds = parseInt(document.querySelector("#prevfds").value || "0");
 
     textoDescritivo = "Salário líquido final de: ";
     euros = " €";
