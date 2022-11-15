@@ -272,16 +272,16 @@ h1{
   height: 30px;
 }
 footer a{
+  background-color: yellow;
+  color: black;
   text-decoration: none;
   list-style: none;
-  color: black;
   text-align: center;
   margin: 5px;
-  font-size: 12px;
+  font-size: 14px;
 }
 footer a:hover{
   cursor:crosshair;
-  background-color: yellow;
 }
 footer{
   display: flex;
