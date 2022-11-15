@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 /* formatação da página total */
 *{
+  font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
