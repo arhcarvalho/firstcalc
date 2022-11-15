@@ -1,4 +1,3 @@
-
 function calc(){
 
     // abaixo as variáveis que vão associar ao valor inserido
@@ -11,9 +10,9 @@ function calc(){
 
     textoDescritivo = "Salário líquido final de: ";
     euros = " €";
-    calculoDesc = (0.23 * alim);
-    baseFinal = base + calculoDesc;
 
+    calculoDesc = (0.23 * alim);
+    base = base + calculoDesc;
     // cálculos de "extras" no ordenado
     calculoSeg = (base / 100) * 11;
     calcularPrev = parseInt(prev * 25);
@@ -21,14 +20,8 @@ function calc(){
     calcularSab = parseInt(sab * 50);
     calcularAlim = parseFloat(alim * 4.77);
     calcularPrevFds = parseInt(prevfds * 20);
-    calcularPrev = 0;
-    calcularPern = 0;
-    calcularSab = 0;
-    calcularAlim = 0;
-    calcularPrevFds = 0;
     
     // cálculo do base com os descontos relativos ao imposto e IRS (tabela de trabalhador dependente sem descendentes)
-   
     if (base < 822.1){
         calculoImp = parseInt((base / 100) * 7.9);
         baseFinal = parseFloat(base - calculoSeg - calculoImp).toFixed(2);
@@ -49,6 +42,8 @@ function calc(){
         baseFinal = parseFloat(base - calculoSeg - calculoImp).toFixed(2);
     }
 
+
+
     // Mudança do ordenado base para inteiro
     baseFinal = parseFloat(baseFinal);
 
@@ -57,3 +52,8 @@ function calc(){
     // Resultado aproximado por causa do inteiro no baseFinal (margem 1€)
     document.querySelector("#result").innerHTML = textoDescritivo + resultado + euros;
     }
+
+    function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        document.getElementById("demo").innerHTML = "Selecionou o colaborador: " + x;
+      }
